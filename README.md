@@ -1,0 +1,5 @@
+- 👋 Hi, I’m @KaiReataza
+- 👀 I’m interested in frontend and backend software engineering
+- 🌱 I’m currently learning html, css, javascript, c#, and java
+- 💞️ I’m looking to collaborate on programming projects that help me develope my skills in progamming languages
+- 📫 How to reach me: kreataza1@gmail.com
