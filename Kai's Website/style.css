@@ -1,104 +1,78 @@
-html {
-  box-sizing: border-box;
-  height: 100%;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+* {
   margin: 0;
   padding: 0;
 }
 
 body {
+  min-height: 100vh;
+  background-image: url(/Images/ELROD.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav {
+  background-color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
-  background: linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
+}
+nav li {
+  height: 50px;
+}
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
   display: flex;
-  font-family: "Dosis", sans-serif;
-  font-display: swap;
-  height: inherit;
-  justify-content: center;
+  align-items: center;
+  color: black;
 }
-
-.wrapper {
-  backdrop-filter: blur(5.5px);
-  -webkit-backdrop-filter: blur(5.5px);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-  color: #232323;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blue(4px);
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.34);
-  flex-basis: 400px;
-  height: 540px;
-  padding: 20px 35px;
+nav a:hover {
+  background-color: #f0f0f0;
 }
-
-.screen {
-  backdrop-filter: blur(5.5px);
-  -webkit-backdrop-filter: blur(5.5px);
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.01);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-  color: #232323;
-  font-size: 35px;
-  overflow: auto;
-  padding: 20px;
-  text-align: right;
-  width: 326px;
+nav li:first-child {
+  margin-right: auto;
 }
-
-.calc-button-row {
-  display: flex;
-  justify-content: space-between;
-  margin: 5% 0;
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.39);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
-
-.calc-button {
-  backdrop-filter: blur(5.5px);
-  -webkit-backdrop-filter: blur(5.5px);
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.01);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-  color: #232323;
-  flex-basis: 20%;
-  font-family: inherit;
-  font-size: 24px;
-  height: 65px;
+.sidebar li {
+  width: 100%;
 }
-
-.calc-button:last-child {
-  backdrop-filter: blur(5.5px);
-  -webkit-backdrop-filter: blur(5.5px);
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.01);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-  color: #fff;
-  background: #d72880;
+.sidebar a {
+  width: 100%;
 }
-
-.calc-button:last-child:hover {
-  background-color: inherit;
-  color: inherit;
+.menu-button {
+  display: none;
 }
-
-.calc-button:hover {
-  background-color: inherit;
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
 }
-
-.calc-button:active {
-  background-color: #ffef78;
-}
-
-.double {
-  flex-basis: 47%;
-}
-
-.triple {
-  flex-basis: 73%;
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
 }
